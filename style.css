@@ -1,0 +1,292 @@
+/* INDEX */
+
+.image img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 5;
+}
+
+.job {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  z-index: 9999;
+  margin-top: 10px;
+  font-family: "Raleway", sans-serif;
+  color: #ffffff;
+}
+
+.name {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  z-index: 9999;
+  margin-top: 150px;
+  font-family: "Raleway", sans-serif;
+  font-size: 25px;
+  color: #ffffff;
+}
+
+.location {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  z-index: 9999;
+  margin-top: 18%;
+  font-size: 25px;
+  font-family: "Raleway", sans-serif;
+  color: #ffffff;
+}
+
+/* INDEX CONTAİNER */
+
+.container {
+  text-align: center;
+  margin-top: 18%;
+}
+
+.expand-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 4%;
+}
+
+.expand-button:hover {
+  background-color: #e74c3c;
+}
+
+.sub-button {
+  background-color: #333;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.sub-button:hover {
+  background-color: #e74c3c;
+}
+
+.hidden-buttons {
+  margin-top: 20px;
+}
+
+.expand {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/*ABOUT*/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 25%;
+  margin-top: 1%;
+}
+
+.card {
+  position: relative;
+  isolation: isolate;
+  width: 550px;
+  height: 400px;
+  background-color: #000000;
+  border-radius: 8px;
+}
+.card__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: inherit;
+  transition: transform 250ms;
+}
+.card:hover .card__image {
+  transform: translateY(-230px) scale(0.75);
+}
+.card__body {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 14px;
+  color: #f4c644;
+  margin-left: 14px;
+}
+.card__category {
+  color: #fff;
+}
+
+.abouttext {
+  flex: 1;
+  padding: 14px;
+  overflow: hidden;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #ffffff;
+}
+
+.indexButton {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10%;
+}
+
+.indexButton:hover {
+  background-color: #e74c3c;
+}
+
+/* SKILLS CONTAINER */
+.container2 {
+  margin: 30px auto;
+  max-width: 500px;
+  height: auto;
+  border: 1px solid grey;
+  border-radius: 15px;
+  padding-bottom: 20px;
+  background-color: #191e24;
+  box-shadow: 10px 10px 20px lightgray;
+}
+
+@media screen and (max-width: 545px) {
+  body {
+    background-color: #191e24;
+    transition: 1s;
+  }
+
+  .container2 {
+    box-shadow: none;
+    border: none;
+    margin-top: 10px;
+  }
+}
+
+/* SKILLs CONTAINER */
+.skill-container {
+  width: 88%;
+  height: 20px;
+  margin: 35px auto;
+  font-weight: 500;
+  font-size: medium;
+}
+
+.skill-bar {
+  width: 100%;
+  height: 15px;
+  background-color: white;
+  margin: 15px auto;
+  border-radius: 10px;
+}
+
+.skill-percentage {
+  border-radius: 10px;
+  height: 100%;
+  background-color: #098fe4;
+  position: relative;
+  animation: anim 3s forwards;
+}
+
+.html .skill-percentage {
+  width: 60%;
+}
+
+.css .skill-percentage {
+  width: 40%;
+}
+
+.js .skill-percentage {
+  width: 0%;
+}
+
+@keyframes anim {
+  0% {
+    width: 0;
+  }
+}
+
+.tooltip {
+  width: 50px;
+  height: 30px;
+  color: black;
+  background-color: white;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  padding: 3px;
+  padding-left: 7px;
+  font-size: 1rem;
+  position: absolute;
+  right: -10px;
+  bottom: 30px;
+}
+
+.tooltip::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  transform: rotate(45deg);
+}
+
+.icons a {
+  display: inline-block;
+  margin: 10px;
+  border-radius: 50%;
+  background-color: #3498db;
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.icons a:hover {
+  background-color: #e74c3c;
+  transform: scale(1.1);
+}
+
+.fa {
+  font-size: 20px;
+}
+
+.icons {
+  text-align: center;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}

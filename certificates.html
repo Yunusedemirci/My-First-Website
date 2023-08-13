@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="image/app-development.png" />
+
+    <title>certificates</title>
+  </head>
+
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      background-color: #131213;
+      line-height: 1.5;
+      display: grid;
+      place-items: center;
+    }
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html,
+    body {
+      height: 25%;
+      margin-top: 1%;
+    }
+
+    .card {
+      position: relative;
+      isolation: isolate;
+      width: 150px;
+      height: 150px;
+      background-color: #000000;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      margin-right: 35px;
+      margin-top: 20%;
+    }
+
+    .card__image {
+      display: flex;
+      flex-direction: column;
+      justify-self: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      border-radius: inherit;
+      transition: transform 250ms;
+    }
+    .card:hover .card__image {
+      transform: translateY(-230px) scale(0.75);
+    }
+    .card__body {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+      color: #ffffff;
+      padding: 0;
+    }
+    .card__category {
+      color: #f4c644;
+      font-size: 0.7rem;
+      line-height: 1.2;
+      padding: 0;
+      margin: 0;
+    }
+
+    .card__author {
+      font-size: 0.6rem;
+      line-height: 1.2;
+      padding-left: auto;
+    }
+
+    .card__cyberpath {
+      color: #f4c644;
+      font-size: 0.7rem;
+      line-height: 1.2;
+      margin-left: 40px;
+    }
+
+    .card__authorcy {
+      font-size: 0.6rem;
+      line-height: 1.2;
+      padding-left: auto;
+    }
+
+    .card__authorsv {
+      font-size: 0.6rem;
+      line-height: 1.2;
+      padding-left: 20px;
+    }
+    .indexButton {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 15%;
+    }
+
+    .indexButton:hover {
+      background-color: #e74c3c;
+    }
+
+    .card-container {
+      display: flex;
+    }
+  </style>
+  <body>
+    <div class="background"></div>
+    <div class="content"></div>
+
+    <div class="card-container">
+      <figure class="card">
+        <img src="image/cyrops.jpeg" alt="..." class="card__image" />
+        <figcaption class="card__body">
+          <div>
+            <h2 class="card__category">Cyrops</h2>
+            <p class="card__author">white Hat Hacker</p>
+            <div class="abouttext"></div>
+          </div>
+        </figcaption>
+      </figure>
+
+      <figure class="card">
+        <img src="image/tersine.jpeg" alt="..." class="card__image" />
+        <figcaption class="card__body">
+          <div>
+            <h2 class="card__cyberpath">CyberPath</h2>
+            <p class="card__authorcy">Reverse Engineering and Malware</p>
+            <div class="abouttext"></div>
+          </div>
+        </figcaption>
+      </figure>
+
+      <figure class="card">
+        <img src="image/bgtek.jpeg" alt="..." class="card__image" />
+        <figcaption class="card__body">
+          <div>
+            <h2 class="card__category">BG-Tek</h2>
+            <p class="card__author">Web Security Training</p>
+            <div class="abouttext"></div>
+          </div>
+        </figcaption>
+      </figure>
+
+      <figure class="card">
+        <img src="image/kalkınma.jpeg" alt="..." class="card__image" />
+        <figcaption class="card__body">
+          <div>
+            <h2 class="card__category">T.C. Dijital Dönüşüm Ofisi</h2>
+            <p class="card__authorsv">Siber Vatan Bootcamp</p>
+            <div class="abouttext"></div>
+          </div>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div>
+      <a href="index.html"
+        ><button id="indexButton" class="indexButton">
+          Return to home page for more information
+        </button></a
+      >
+    </div>
+  </body>
+</html>
